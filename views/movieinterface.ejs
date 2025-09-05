@@ -1,0 +1,119 @@
+<html>
+    <head>
+    <link href="/stylesheets/style.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Dosis:wght@300&family=Kanit:wght@100;300&family=Mochiy+Pop+One&family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="/javascripts/project.js"></script>    
+</head>
+ <body>
+    <form action="/movie/submit_movie" method="post" enctype="multipart/form-data">
+    <div class="maincontainer">
+        <div class="box">
+            <div class="container">
+                    <div class="row">
+                    <div class="col-12" headstyle centerstyle>
+                    <img src="/images/movie.png" width="5%">
+                    <span>Movie Register</span>
+                   </div>
+                   </div>
+                    <div class="row">
+                    <div class="col-12">
+                    <hr>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-3">
+                <select class="form-select" id="stateid" name="stateid">
+                <option selected>State</option>     
+                </select>
+                </div>
+                        <div class="col-3">
+                        <select class="form-select" id="cityid" name="cityid">
+                        <option selected>City</option>     
+                        </select>
+                        </div>
+                        <div class="col-3">
+                        <select class="form-select" id="cinemaid" name="cinemaid">
+                        <option selected>Cinema</option>     
+                        </select>
+                        </div>
+                        <div class="col-3">
+                        <select class="form-select" id="screenid" name="screenid">
+                        <option selected>Screen</option>     
+                        </select>                     
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-12">
+                        <input type="text" placeholder="Movie Name" name="moviename" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        </div> 
+                        <div class="row">
+                        <div class="col-12">
+                        <input type="text" placeholder="Description" name="description" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-4">
+                        <input type="text" placeholder="Actor Name" name="actor" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        <div class="col-4">
+                        <input type="text" placeholder="Actoress Name" name="actress" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        <div class="col-4">
+                        <input type="text" placeholder="Singer Name" name="singer" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        </div>
+                        <div class="row">
+                        <div class="col-6">
+                        <input type="date" placeholder="Release Date" name="release"  class="form-control" style="margin-top: 8px;">
+                        </div>
+                        <div class="col-6">
+                        <input type="text" placeholder="Ticket Price" name="price" class="form-control" style="margin-top: 8px;">
+                        </div>
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                            <div class="col-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="2d" value="2d">
+                                    <label class="form-check-label" for="2d">2d</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="status" id="3d" value="3d">
+                                    <label class="form-check-label" for="3d">3d</label>
+                                  </div>
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                        <div class="col-6">
+                        <label for="picture" class="form-label">Upload  Image..</label>
+                        <input accept="image/jpeg, image/png" class="form-control" type="file" id="picture" name="picture">
+                        </div>    
+                        <div class="col-6" style="display: flex; align-items: center; justify-content: center;" >
+                        <img src="/images/image.png"   id="movieimage" width="60" style="border-radius: 10px;"/>
+                        </div>    
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                        <div class="col-6" style="display: flex; align-items: center; justify-content: center;">
+                        <button type="submit" class="btn btn-primary" style="width:200px">Submit</button>
+                        </div>    
+                         <div class="col-6"  style="display: flex; align-items: center; justify-content: center;" >
+                          <button type="reset" class="btn btn-primary" style="width:200px">Reset</button>
+                         </div>                           
+                        </div>
+                        <div class="row" style="margin-top: 8px;">
+                        <div class="col-12" style="display: flex; align-items: center; justify-content: center;">
+                        <%=message%>
+                        </div>
+                        </div>
+
+
+                        </div>
+                        </div>
+                        </div>
+                       </form>
+                    </body>
+                 </html>
+
