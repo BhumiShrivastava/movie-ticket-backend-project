@@ -1,7 +1,7 @@
 .maincontainer{
-  width:100%;
+  width:100vw;
   height: 100%;
-  background:#bdc3c7 ;
+  background: #2786c588 ;
   display: flex;
   justify-content:center;
   align-items: center;
